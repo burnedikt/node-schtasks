@@ -66,3 +66,10 @@ t.b.d.
 
 t.b.d.
 
+### Testing
+
+There is a small set of testcases available in the tests
+ folder that can be run using `mocha` (assuming you installed mocha with `npm install -g mocha`).
+ 
+Please be aware that the testcase for creating a scheduled task requires administrator privileges so 
+ you are required to run the tests in an elevated bash / cmd.
