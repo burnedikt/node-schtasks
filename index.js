@@ -115,6 +115,10 @@ module.exports.create = (opts) => {
             case 'force':
                 args.push('/F');
                 break;
+            case 'runLevel':
+                args.push('/RL');
+                args.push(optVal);
+                break;
         }
     }
     return schtasks('create', args).then((result) => {
