@@ -35,6 +35,10 @@ schtasks.query().then((tasks) => {
 
 #### Create Task
 
+> Unfortunately, creating tasks requires administrator privileges, so you'll either have to run your node js script
+ in a bash / cmd with administrator privileges (elevated), or use a suitable node module to run your script in an 
+ elevated mode. E.g., check out [elevator](https://www.npmjs.com/package/elevator)...
+
 ```js
 const schtasks = require('node-schtasks');
 
