@@ -16,13 +16,26 @@ module.exports.query = (opts) => {
         format: 'CSV'
     }, opts);
     let args = [];
+    // support for different arguments, check https://technet.microsoft.com/en-us/library/cc772785(v=ws.10).aspx#BKMK_query
     for (let opt in _opts) {
-        let arg;
+        let optVal = _opts[opt];
         switch (opt) {
             case 'format':
                 args.push('/fo');
-                args.push(_opts[opt]);
+                args.push(optVal);
                 args.push('/nh');
+                break;
+            case 'computer':
+                args.push('/c');
+                args.push(optVal);
+                break;
+            case 'user':
+                args.push('/u');
+                args.push(optVal);
+                break;
+            case 'password':
+                args.push('/p');
+                args.push(optVal);
                 break;
         }
     }
@@ -38,3 +51,5 @@ module.exports.query = (opts) => {
         });
     });
 }
+
+module.exports.list = module.exports.query;
