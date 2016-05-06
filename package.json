@@ -1,7 +1,7 @@
 {
   "name": "node-schtasks",
   "version": "0.1.0",
-  "description": "A NodeJS wrapper around the windows schtasks command. Used to list, add and modify scheduled tasks on windows.",
+  "description": "Wrapper for the Windows `schtasks` command. Used to list, add and modify scheduled tasks.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,21 @@
     "scheduler",
     "task"
   ],
-  "author": "Benedikt Reiser <benedikt.reiser\u001bl@innoactive.de>",
+  "author": {
+    "name": "Benedikt Reiser",
+    "email": "benedikt.reiser@gmail.com",
+    "url": "burnedikt.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
   "license": "ISC",
+  "os": [
+    "win32"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/burnedikt/node-schtasks.git"
@@ -21,5 +34,12 @@
   "bugs": {
     "url": "https://github.com/burnedikt/node-schtasks/issues"
   },
-  "homepage": "https://github.com/burnedikt/node-schtasks"
+  "homepage": "https://github.com/burnedikt/node-schtasks",
+  "dependencies": {
+    "csv-parse": "^1.1.0",
+    "execa": "^0.4.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
 }
