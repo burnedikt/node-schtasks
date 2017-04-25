@@ -45,7 +45,7 @@ const schtasks = require('node-schtasks');
 var job = {
 	taskName: 'test1',
 	scheduleType: 'ONLOGON', // refer to https://technet.microsoft.com/en-us/library/cc772785(v=ws.10).aspx#BKMK_create for more values
-	taskrun: 'notepad.exe', // path needs to be absolute, else it is suspected to be relative to System32
+	taskRun: 'notepad.exe', // path needs to be absolute, else it is suspected to be relative to System32
 	force: true // force creation even if the task does alraedy exist
 };
 
